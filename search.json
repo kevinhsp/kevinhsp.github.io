@@ -18,21 +18,21 @@
     "href": "index.html",
     "title": "Supeng He",
     "section": "",
-    "text": "TODO: research-interest text (Supeng to provide)."
+    "text": "I am a Research Assistant at the W. P. Carey School of Business, Arizona State University, where I work with Professor Kan Xu on TODO: one phrase describing the research area. My research interests are in TODO: fields and questions. I am applying to PhD programs in TODO: field for Fall 2027."
   },
   {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
+    "objectID": "index.html#current-research",
+    "href": "index.html#current-research",
     "title": "Supeng He",
-    "section": "",
-    "text": "TODO: research-interest text (Supeng to provide)."
+    "section": "Current research",
+    "text": "Current research\n\nTODO: project title. TODO: one sentence on the question and the data or method. With TODO: co-authors. TODO: status.\nTODO: project title. TODO: one sentence on the question and the data or method. With TODO: co-authors. TODO: status.\n\nSee Research for details and Projects for code and data work."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Supeng He",
     "section": "Education",
-    "text": "Education\nMS Computer Science, Rice University\nMS Business Analytics and Project Management, University of Connecticut\nBA Business, Drew University — minors in Data Science and Mathematics"
+    "text": "Education\n\nMS Computer Science, Rice University\nMS Business Analytics and Project Management, University of Connecticut\nBA Business, Drew University — minors in Data Science and Mathematics"
   },
   {
     "objectID": "cv.html",
@@ -60,20 +60,27 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "TODO: paper title\nTODO: co-authors\nTODO: one-paragraph description of the paper.\nStatus: TODO"
+    "text": "TODO: paper title\nwith TODO: co-authors\nTODO: one-paragraph abstract.\nStatus: TODO"
   },
   {
     "objectID": "research.html#working-papers",
     "href": "research.html#working-papers",
     "title": "Research",
     "section": "",
-    "text": "TODO: paper title\nTODO: co-authors\nTODO: one-paragraph description of the paper.\nStatus: TODO"
+    "text": "TODO: paper title\nwith TODO: co-authors\nTODO: one-paragraph abstract.\nStatus: TODO"
   },
   {
-    "objectID": "research.html#conference-abstracts",
-    "href": "research.html#conference-abstracts",
+    "objectID": "research.html#work-in-progress",
+    "href": "research.html#work-in-progress",
     "title": "Research",
-    "section": "Conference Abstracts",
-    "text": "Conference Abstracts\nTODO: abstract title\nTODO: co-authors · TODO: conference, year\nTODO: one-paragraph description of the abstract.\nStatus: TODO"
+    "section": "Work in Progress",
+    "text": "Work in Progress\nTODO: project title\nwith TODO: co-authors\nTODO: one-paragraph description of the question, data and method.\nStatus: TODO"
+  },
+  {
+    "objectID": "research.html#conference-presentations",
+    "href": "research.html#conference-presentations",
+    "title": "Research",
+    "section": "Conference Presentations",
+    "text": "Conference Presentations\nTODO: abstract title\nwith TODO: co-authors · TODO: conference, location, year\nTODO: one-paragraph abstract.\nStatus: TODO"
   }
 ]
