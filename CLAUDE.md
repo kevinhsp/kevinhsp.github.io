@@ -79,7 +79,7 @@
 - [x] Site scaffolded and rendered locally
 - [x] GitHub repo created and `main` pushed (https://github.com/kevinhsp/kevinhsp.github.io)
 - [x] First `quarto publish gh-pages` done
-- [ ] GitHub Actions publish workflow green
-- [ ] Pages source set to `gh-pages`
+- [x] GitHub Actions publish workflow green (first run 2026-10-06, 29 s, no Python needed)
+- [x] Pages source set to `gh-pages` (via gh api; custom domain supenghe.com already recorded)
 - [ ] Cloudflare DNS records added (Supeng, by hand)
 - [ ] Custom domain verified and Enforce HTTPS on (Supeng, by hand)
