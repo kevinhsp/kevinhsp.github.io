@@ -5,8 +5,10 @@
 - GitHub repo: `kevinhsp/kevinhsp.github.io`, public. Source branch `main`.
 - Publishing: GitHub Actions `.github/workflows/publish.yml` runs on every push to `main`:
   `quarto-dev/quarto-actions/setup@v2` + `quarto-dev/quarto-actions/publish@v2` with
-  `target: gh-pages` and `permissions: contents: write`. The very first publish is done locally
-  once with `quarto publish gh-pages` (creates the `gh-pages` branch and `_publish.yml`).
+  `target: gh-pages` and `permissions: contents: write`. The very first publish was done locally on 2026-10-06 with
+  `quarto publish gh-pages --no-prompt --no-browser`, after creating an empty `gh-pages` branch on
+  origin via `git commit-tree` (Quarto's own branch creation does an orphan checkout in the working
+  tree). The gh-pages target creates no `_publish.yml`; none is needed.
 - Computations: `execute: freeze: auto` in `_quarto.yml`. Python cells run locally only; `_freeze/`
   is committed so CI never needs Python/Jupyter. After editing any page with code cells, run
   `quarto render` and commit the updated `_freeze/`.
@@ -76,7 +78,7 @@
 - [x] Tooling installed (quarto, gh, python + jupyter + matplotlib)
 - [x] Site scaffolded and rendered locally
 - [x] GitHub repo created and `main` pushed (https://github.com/kevinhsp/kevinhsp.github.io)
-- [ ] First `quarto publish gh-pages` done
+- [x] First `quarto publish gh-pages` done
 - [ ] GitHub Actions publish workflow green
 - [ ] Pages source set to `gh-pages`
 - [ ] Cloudflare DNS records added (Supeng, by hand)
