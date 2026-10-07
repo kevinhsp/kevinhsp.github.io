@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "TODO: paper title\nTODO: co-authors\nTODO: one-paragraph description of the paper.\nStatus: TODO"
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research",
+    "section": "",
+    "text": "TODO: paper title\nTODO: co-authors\nTODO: one-paragraph description of the paper.\nStatus: TODO"
+  },
+  {
+    "objectID": "research.html#conference-abstracts",
+    "href": "research.html#conference-abstracts",
+    "title": "Research",
+    "section": "Conference Abstracts",
+    "text": "Conference Abstracts\nTODO: abstract title\nTODO: co-authors · TODO: conference, year\nTODO: one-paragraph description of the abstract.\nStatus: TODO"
+  },
+  {
+    "objectID": "projects/sample-project/index.html",
+    "href": "projects/sample-project/index.html",
+    "title": "Sample project: a Monte Carlo estimate of π",
+    "section": "",
+    "text": "This post is a sample that exercises the computational pipeline behind this site: the Python cell below runs locally, Quarto freezes its output into the repository, and GitHub Actions rebuilds the site without needing Python. The code draws random points in the unit square and estimates π from the share that lands inside the quarter circle.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nrng = np.random.default_rng(2026)\nn = 20_000\nx, y = rng.random(n), rng.random(n)\ninside = x**2 + y**2 &lt;= 1\nestimate = 4 * np.cumsum(inside) / np.arange(1, n + 1)\n\nfig, ax = plt.subplots(figsize=(7, 3.8))\nax.plot(np.arange(1, n + 1), estimate, color=\"#2a78d6\", lw=1.8)\nax.axhline(np.pi, color=\"#52514e\", lw=1, ls=\"--\")\nax.set_xscale(\"log\")\nax.set_xlim(10, n)\nax.set_ylim(2.6, 3.7)\nax.set_xlabel(\"Number of random points\")\nax.set_ylabel(\"Estimate of π\")\nax.set_title(f\"Estimate after {n:,} points: {estimate[-1]:.4f}\", loc=\"left\", color=\"#0b0b0b\")\nfor side in (\"top\", \"right\"):\n    ax.spines[side].set_visible(False)\nax.grid(axis=\"y\", color=\"#e5e5e3\", lw=0.8)\nax.set_axisbelow(True)\nfig.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: Running Monte Carlo estimate of π as more points are drawn. The dashed line marks the true value."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Supeng He",
+    "section": "",
+    "text": "TODO: research-interest text (Supeng to provide)."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Supeng He",
+    "section": "",
+    "text": "TODO: research-interest text (Supeng to provide)."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Supeng He",
+    "section": "Education",
+    "text": "Education\nMS Computer Science, Rice University\nMS Business Analytics and Project Management, University of Connecticut\nBA Business, Drew University — minors in Data Science and Mathematics"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "How this site is built\n\n\nQuarto, GitHub Actions and GitHub Pages, with computational pages frozen so the build server never runs Python.\n\n\n\n\n\nOct 6, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download CV (PDF)"
+  },
+  {
+    "objectID": "posts/how-this-site-is-built/index.html",
+    "href": "posts/how-this-site-is-built/index.html",
+    "title": "How this site is built",
+    "section": "",
+    "text": "This site is a Quarto website. The source lives in a public GitHub repository, and every push to the main branch runs a GitHub Actions workflow that renders the pages and pushes the output to the gh-pages branch, which GitHub Pages serves at supenghe.com.\nPages with code execute their Python cells only on my machine. Quarto’s freeze feature stores the results in the repository, so the build server never needs Python or Jupyter, and the published figures are exactly the ones rendered locally."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Sample project: a Monte Carlo estimate of π\n\n\nA small computational post that verifies Python figures render through Quarto’s freeze workflow.\n\n\n\n\n\nOct 6, 2026\n\n\n\n\n\nNo matching items"
+  }
+]
