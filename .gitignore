@@ -1,0 +1,7 @@
+/.quarto/
+/_site/
+/.venv/
+/.idea/
+/_environment.local
+/_*.local
+**/*.quarto_ipynb

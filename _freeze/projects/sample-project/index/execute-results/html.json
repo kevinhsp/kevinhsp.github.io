@@ -1,0 +1,12 @@
+{
+  "hash": "72342e44c09103af68f33e4c60f6531d",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Sample project: a Monte Carlo estimate of π\"\ndescription: \"A small computational post that verifies Python figures render through Quarto's freeze workflow.\"\ndate: 2026-10-06\njupyter: python3\ncode-fold: true\n---\n\nThis post is a sample that exercises the computational pipeline behind this site: the Python cell below runs locally, Quarto freezes its output into the repository, and GitHub Actions rebuilds the site without needing Python. The code draws random points in the unit square and estimates π from the share that lands inside the quarter circle.\n\n::: {#cell-fig-pi-estimate .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nrng = np.random.default_rng(2026)\nn = 20_000\nx, y = rng.random(n), rng.random(n)\ninside = x**2 + y**2 <= 1\nestimate = 4 * np.cumsum(inside) / np.arange(1, n + 1)\n\nfig, ax = plt.subplots(figsize=(7, 3.8))\nax.plot(np.arange(1, n + 1), estimate, color=\"#2a78d6\", lw=1.8)\nax.axhline(np.pi, color=\"#52514e\", lw=1, ls=\"--\")\nax.set_xscale(\"log\")\nax.set_xlim(10, n)\nax.set_ylim(2.6, 3.7)\nax.set_xlabel(\"Number of random points\")\nax.set_ylabel(\"Estimate of π\")\nax.set_title(f\"Estimate after {n:,} points: {estimate[-1]:.4f}\", loc=\"left\", color=\"#0b0b0b\")\nfor side in (\"top\", \"right\"):\n    ax.spines[side].set_visible(False)\nax.grid(axis=\"y\", color=\"#e5e5e3\", lw=0.8)\nax.set_axisbelow(True)\nfig.tight_layout()\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![Running Monte Carlo estimate of π as more points are drawn. The dashed line marks the true value.](index_files/figure-html/fig-pi-estimate-output-1.png){#fig-pi-estimate width=663 height=354}\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

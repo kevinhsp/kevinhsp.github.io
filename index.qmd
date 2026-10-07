@@ -1,0 +1,32 @@
+---
+title: "Supeng He"
+subtitle: "Research Assistant with Kan Xu, W. P. Carey School of Business, Arizona State University · Applying to PhD programs, Fall 2027"
+image: photo.jpg
+image-alt: "Photo of Supeng He"
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - icon: envelope
+      text: Email
+      href: "mailto:TODO"
+    - icon: github
+      text: GitHub
+      href: "https://github.com/kevinhsp"
+    - icon: linkedin
+      text: LinkedIn
+      href: "https://www.linkedin.com/in/TODO"
+---
+
+## Research interests
+
+TODO: research-interest text (Supeng to provide).
+
+## Education
+
+**MS Computer Science**, Rice University
+
+**MS Business Analytics and Project Management**, University of Connecticut
+
+**BA Business**, Drew University — minors in Data Science and Mathematics

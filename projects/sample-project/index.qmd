@@ -1,0 +1,38 @@
+---
+title: "Sample project: a Monte Carlo estimate of π"
+description: "A small computational post that verifies Python figures render through Quarto's freeze workflow."
+date: 2026-10-06
+jupyter: python3
+code-fold: true
+---
+
+This post is a sample that exercises the computational pipeline behind this site: the Python cell below runs locally, Quarto freezes its output into the repository, and GitHub Actions rebuilds the site without needing Python. The code draws random points in the unit square and estimates π from the share that lands inside the quarter circle.
+
+```{python}
+#| label: fig-pi-estimate
+#| fig-cap: "Running Monte Carlo estimate of π as more points are drawn. The dashed line marks the true value."
+import numpy as np
+import matplotlib.pyplot as plt
+
+rng = np.random.default_rng(2026)
+n = 20_000
+x, y = rng.random(n), rng.random(n)
+inside = x**2 + y**2 <= 1
+estimate = 4 * np.cumsum(inside) / np.arange(1, n + 1)
+
+fig, ax = plt.subplots(figsize=(7, 3.8))
+ax.plot(np.arange(1, n + 1), estimate, color="#2a78d6", lw=1.8)
+ax.axhline(np.pi, color="#52514e", lw=1, ls="--")
+ax.set_xscale("log")
+ax.set_xlim(10, n)
+ax.set_ylim(2.6, 3.7)
+ax.set_xlabel("Number of random points")
+ax.set_ylabel("Estimate of π")
+ax.set_title(f"Estimate after {n:,} points: {estimate[-1]:.4f}", loc="left", color="#0b0b0b")
+for side in ("top", "right"):
+    ax.spines[side].set_visible(False)
+ax.grid(axis="y", color="#e5e5e3", lw=0.8)
+ax.set_axisbelow(True)
+fig.tight_layout()
+plt.show()
+```

@@ -1,0 +1,9 @@
+---
+title: "How this site is built"
+description: "Quarto, GitHub Actions and GitHub Pages, with computational pages frozen so the build server never runs Python."
+date: 2026-10-06
+---
+
+This site is a [Quarto](https://quarto.org) website. The source lives in a public GitHub repository, and every push to the `main` branch runs a GitHub Actions workflow that renders the pages and pushes the output to the `gh-pages` branch, which GitHub Pages serves at supenghe.com.
+
+Pages with code execute their Python cells only on my machine. Quarto's [freeze](https://quarto.org/docs/projects/code-execution.html#freeze) feature stores the results in the repository, so the build server never needs Python or Jupyter, and the published figures are exactly the ones rendered locally.

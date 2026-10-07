@@ -1,0 +1,37 @@
+project:
+  type: website
+  resources:
+    - CNAME
+
+website:
+  title: "Supeng He"
+  site-url: "https://supenghe.com"
+  navbar:
+    right:
+      - text: Research
+        href: research.qmd
+      - text: Projects
+        href: projects.qmd
+      - text: Blog
+        href: blog.qmd
+      - text: CV
+        href: cv.qmd
+  page-footer:
+    left: "© 2026 Supeng He"
+    right:
+      - icon: envelope
+        text: Email
+        href: "mailto:TODO"                          # TODO: real email
+      - icon: github
+        text: GitHub
+        href: "https://github.com/kevinhsp"
+      - icon: linkedin
+        text: LinkedIn
+        href: "https://www.linkedin.com/in/TODO"     # TODO: real LinkedIn URL
+
+format:
+  html:
+    theme: cosmo
+
+execute:
+  freeze: auto

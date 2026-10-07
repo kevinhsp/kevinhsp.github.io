@@ -1,0 +1,21 @@
+---
+title: "Research"
+---
+
+## Working Papers
+
+**TODO: paper title**\
+TODO: co-authors
+
+TODO: one-paragraph description of the paper.
+
+*Status: TODO*
+
+## Conference Abstracts
+
+**TODO: abstract title**\
+TODO: co-authors · TODO: conference, year
+
+TODO: one-paragraph description of the abstract.
+
+*Status: TODO*
