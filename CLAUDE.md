@@ -24,6 +24,10 @@
   sets `QUARTO_PYTHON=E:/-personal_web/.venv/Scripts/python.exe`. On a new machine, recreate that file
   or activate `.venv` before running quarto.
 - Quarto and GitHub CLI are installed with winget (user scope). This is Windows: no brew.
+- Git pushes use gh as the credential helper, configured repo-locally only
+  (`git config --local credential.helper`), so the global git config is untouched.
+- Line endings: `core.autocrlf=true` is fine; Quarto normalizes newlines before hashing
+  frozen inputs, so CRLF/LF differences never invalidate `_freeze/`.
 - Commands:
   - `quarto preview --no-browser` — local preview
   - `quarto render` — full render into `_site/`, refreshes `_freeze/`
@@ -40,9 +44,12 @@
 - `cv.qmd` — links to `cv.pdf` (placeholder PDF until the real CV replaces it)
 - `404.qmd`
 - `_quarto.yml` — navbar Research · Projects · Blog · CV; footer with email/GitHub/LinkedIn;
-  theme cosmo; `execute: freeze: auto`; `resources: [CNAME]`
+  theme flatly + `custom.scss`; `execute: freeze: auto`; `resources: [CNAME]`
 - `.gitignore` — `/.quarto/`, `/_site/`, plus local-only `/.venv/`, `/.idea/`, `/_environment.local`
-- Custom SCSS only if needed; currently none.
+- `custom.scss` — minimal overrides on flatly (deep-blue links and navbar highlight instead of
+  flatly's teal). Keep it small; no further SCSS unless needed.
+- Look and feel (decided 2026-10-06): conservative business-school style — navy navbar (flatly),
+  deep-blue accents, white background, no gimmicks.
 
 ## About Supeng (source of truth for placeholders)
 - Name: Supeng He
@@ -68,7 +75,7 @@
 ## Setup status
 - [x] Tooling installed (quarto, gh, python + jupyter + matplotlib)
 - [x] Site scaffolded and rendered locally
-- [ ] GitHub repo created and `main` pushed
+- [x] GitHub repo created and `main` pushed (https://github.com/kevinhsp/kevinhsp.github.io)
 - [ ] First `quarto publish gh-pages` done
 - [ ] GitHub Actions publish workflow green
 - [ ] Pages source set to `gh-pages`
