@@ -5,17 +5,26 @@ title: "Research"
 ## Working Papers
 
 **TODO: paper title**\
-TODO: co-authors
+with TODO: co-authors
 
-TODO: one-paragraph description of the paper.
+TODO: one-paragraph abstract.
 
 *Status: TODO*
 
-## Conference Abstracts
+## Work in Progress
+
+**TODO: project title**\
+with TODO: co-authors
+
+TODO: one-paragraph description of the question, data and method.
+
+*Status: TODO*
+
+## Conference Presentations
 
 **TODO: abstract title**\
-TODO: co-authors · TODO: conference, year
+with TODO: co-authors · TODO: conference, location, year
 
-TODO: one-paragraph description of the abstract.
+TODO: one-paragraph abstract.
 
 *Status: TODO*

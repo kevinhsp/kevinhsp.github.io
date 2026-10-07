@@ -37,9 +37,11 @@
   - `quarto publish gh-pages --no-prompt --no-browser` — manual publish (CI normally does this)
 
 ## Site structure
-- `index.qmd` — about page (template `trestles`): `photo.jpg`, name, position line,
-  research interests (TODO), email/GitHub/LinkedIn links
-- `research.qmd` — Working Papers and Conference Abstracts; every entry has a status line
+- `index.qmd` — about page (template `trestles`). Sidebar: `photo.jpg`, name, position line, links
+  (Email, CV, GitHub, LinkedIn). Body: one bio paragraph (role, advisor, research interests, and the
+  bold "applying to PhD programs for Fall 2027" statement), "Current research" list, "Education" list.
+- `research.qmd` — Working Papers, Work in Progress, Conference Presentations. Entry format:
+  bold title, "with co-authors" line, one-paragraph abstract, italic status line
 - `projects.qmd` — listing of `projects/`; each project is `projects/<slug>/index.qmd`
   (may contain Python cells)
 - `blog.qmd` — listing of `posts/`; each post is `posts/<slug>/index.qmd`
@@ -48,8 +50,9 @@
 - `_quarto.yml` — navbar Research · Projects · Blog · CV; footer with email/GitHub/LinkedIn;
   theme flatly + `custom.scss`; `execute: freeze: auto`; `resources: [CNAME]`
 - `.gitignore` — `/.quarto/`, `/_site/`, plus local-only `/.venv/`, `/.idea/`, `/_environment.local`
-- `custom.scss` — minimal overrides on flatly (deep-blue links and navbar highlight instead of
-  flatly's teal). Keep it small; no further SCSS unless needed.
+- `custom.scss` — overrides on flatly: Source Serif 4 headings + Source Sans 3 body (Google Fonts,
+  via flatly's `$web-font-path`), smaller type scale (h1 1.85rem, h2 1.4rem, h3 1.2rem, lead
+  1.1rem), deep-blue links and navbar highlight instead of flatly's teal. Keep it small.
 - Look and feel (decided 2026-10-06): conservative business-school style — navy navbar (flatly),
   deep-blue accents, white background, no gimmicks.
 
@@ -83,3 +86,10 @@
 - [x] Pages source set to `gh-pages` (via gh api; custom domain supenghe.com already recorded)
 - [ ] Cloudflare DNS records added (Supeng, by hand)
 - [ ] Custom domain verified and Enforce HTTPS on (Supeng, by hand)
+
+## Reference sites studied (2026-10-06)
+Structure of the home and research pages follows what well-made predoc/RA sites do:
+- https://glenntfung.github.io/ — research fellow in quantitative marketing at Kellogg: photo + contact links, one bio paragraph (role, focus, background), then recent writing.
+- https://sumitjatwar.github.io/ — information-systems predoc: one-sentence research focus, papers with status and target venue, experience, education, toolkit, CV.
+- https://ktjhofmann.github.io/ — economist: Working Papers / Work in Progress / Publications; entries = bold title, co-authors, status, abstract, links.
+- https://www.econ.umd.edu/graduate/instructions-setting-personal-websites — landing page must state status and field in one sentence and link to CV and Research.
